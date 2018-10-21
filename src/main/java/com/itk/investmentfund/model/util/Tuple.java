@@ -1,24 +1,40 @@
-package com.itk.investmentfund.model;
+package com.itk.investmentfund.model.util;
 
-public class Tuple <X, Y> {
+public class Tuple<X, Y> {
 
-    private final X key;
-    private final Y value;
+    private X x;
+    private Y y;
 
-    public Tuple(X key, Y value) {
-        this.key = key;
-        this.value = value;
+    public static <X, Y> Tuple<X, Y> of(X x, Y y) {
+        return new Tuple<>(x, y);
     }
 
-    public static <X, Y> Tuple<X, Y> of (X key, Y value) {
-        return new Tuple<>(key, value);
+    public Tuple(X x, Y y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public X getKey() {
-        return key;
+    public X getX() {
+        return x;
     }
 
-    public Y getValue() {
-        return value;
+    public Y getY() {
+        return y;
+    }
+
+    public void setX(X x) {
+        this.x = x;
+    }
+
+    public void setY(Y y) {
+        this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "Tuple{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

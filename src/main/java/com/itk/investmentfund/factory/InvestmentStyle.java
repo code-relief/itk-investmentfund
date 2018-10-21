@@ -4,11 +4,11 @@ import com.itk.investmentfund.model.FundKind;
 import com.itk.investmentfund.model.Split;
 import com.itk.investmentfund.model.util.Tuple;
 
-public enum InvestmentStyleFactory {
+public enum InvestmentStyle {
 
     SAVE {
         @Override
-        public Split getInvestmentStyle() {
+        public Split getSplit() {
             return new Split(
                     Tuple.of(FundKind.POLISH, 20),
                     Tuple.of(FundKind.FOREIGN, 75),
@@ -19,7 +19,7 @@ public enum InvestmentStyleFactory {
 
     BALANCED {
         @Override
-        public Split getInvestmentStyle() {
+        public Split getSplit() {
             return new Split(
                     Tuple.of(FundKind.POLISH, 30),
                     Tuple.of(FundKind.FOREIGN, 60),
@@ -29,7 +29,7 @@ public enum InvestmentStyleFactory {
     },
 
     AGGRESSIVE {
-        public Split getInvestmentStyle() {
+        public Split getSplit() {
             return new Split(
                     Tuple.of(FundKind.POLISH, 40),
                     Tuple.of(FundKind.FOREIGN, 20),
@@ -38,7 +38,7 @@ public enum InvestmentStyleFactory {
         }
     };
 
-    public Split getInvestmentStyle() {
+    public Split getSplit() {
         return null;
     }
 

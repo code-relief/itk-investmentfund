@@ -1,4 +1,6 @@
 package com.itk.investmentfund.model;
 
-public enum Kind {
+public enum FundKind {
+    POLISH, FOREIGN, PECUNIARY
+
 }
